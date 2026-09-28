@@ -13,7 +13,7 @@
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{background:var(--bg);color:var(--txt);
-    font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans TC","Hiragino Sans",sans-serif;
+    font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans TC","Hiragino Sans","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
     -webkit-text-size-adjust:100%}
   .wrap{max-width:720px;margin:0 auto;padding:40px 20px 72px}
   header{border-bottom:2px solid var(--txt);padding-bottom:20px;margin-bottom:28px}
@@ -40,7 +40,7 @@
   .langbar button[aria-pressed="true"]{background:var(--txt);color:var(--bg);
     border-color:var(--txt)}
   [data-l]{display:none}
-  body.l-zh [data-l="zh"], body.l-en [data-l="en"], body.l-ja [data-l="ja"]{display:block}
+  body.l-zh [data-l="zh"], body.l-en [data-l="en"], body.l-ja [data-l="ja"], body.l-ko [data-l="ko"]{display:block}
   @media (max-width:520px){
     .wrap{padding:26px 16px 56px}
     .logo span{font-size:22px}
@@ -60,6 +60,7 @@
     <button type="button" data-set="zh" aria-pressed="true">繁體中文</button>
     <button type="button" data-set="en" aria-pressed="false">English</button>
     <button type="button" data-set="ja" aria-pressed="false">日本語</button>
+    <button type="button" data-set="ko" aria-pressed="false">한국어</button>
   </div>
 
   <!-- ================= 繁體中文 ================= -->
@@ -237,8 +238,58 @@
       <a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a> までお願いします。</p>
   </div>
 
+  <!-- ================= 한국어 ================= -->
+  <div data-l="ko">
+    <div class="card">
+      <p style="margin:0"><strong>요약:</strong> 이 게임은 계정 가입이 필요 없으며, 개발자는 이용자의 개인정보를 수집·저장·판매하지 않습니다. 게임 진행 상황은 이용자의 기기 안에만 저장됩니다. 기기 정보에 접근하는 것은 광고를 제공하는 Google AdMob뿐입니다.</p>
+    </div>
+
+    <h2>1. 개발자가 수집하는 정보</h2>
+    <p><strong>없습니다.</strong> 이 게임은 가입이 필요 없고 이름, 이메일, 전화번호 등 신원을 확인할 수 있는 정보를 요구하지 않습니다. 분석 도구나 추적 도구도 전혀 포함되어 있지 않습니다. 개발자의 서버로 데이터가 전송되는 일은 없으며, 애초에 이 게임에는 서버가 없습니다.</p>
+
+    <h2>2. 기기에 저장되는 정보</h2>
+    <p>다음 정보는 앱 전용 저장 공간(iOS는 앱 컨테이너, Android는 앱의 비공개 저장 공간)에 저장되며 기기 밖으로 나가지 않습니다:</p>
+    <ul>
+      <li>게임 진행 상황: 코인, 해금한 공과 스킨, 업적, 전적</li>
+      <li>게임 설정: 언어, 음악과 효과음의 켜기/끄기 및 음량</li>
+      <li>구매 항목의 로컬 기록</li>
+    </ul>
+    <p>앱을 삭제하면 위의 정보는 모두 지워집니다. 이 게임은 <strong>클라우드 백업이 없으므로</strong> 삭제 후에는 복구할 수 없습니다.</p>
+
+    <h2>3. 제3자 서비스</h2>
+
+    <p><strong>Google AdMob(광고)</strong><br>
+      이 게임은 보상형 광고와 전면 광고를 표시하기 위해 Google AdMob을 사용합니다. 광고가 재생될 때 Google은 기기의 광고 식별자(iOS는 IDFA, Android는 Google 광고 ID), IP 주소, 기기 및 운영체제 정보, 광고와의 상호작용 기록을 수집하여 광고 제공과 성과 측정에 사용할 수 있습니다. 이 정보는 Google이 처리하며, 개발자는 개별 이용자의 데이터를 열람할 수 없습니다.<br>
+      자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 서비스를 사용하는 사이트 또는 앱에서 Google이 정보를 사용하는 방법</a>을 참고해 주세요.</p>
+
+    <p><strong>인앱 구매(Apple 및 Google)</strong><br>
+      모든 유료 항목은 iOS에서는 Apple의 인앱 구매, Android에서는 Google Play 결제 시스템을 통해 처리됩니다. 결제 수단과 청구 정보는 <strong>개발자를 전혀 거치지 않으며</strong>, 개발자는 구매가 성공했는지 여부만 알 수 있습니다.</p>
+
+    <h2>4. 광고 맞춤 설정</h2>
+    <p><strong>iOS:</strong> Apple의 규정에 따라 광고 식별자를 사용하기 전에 추적 허용 여부를 먼저 묻습니다. <strong>거부하셔도 됩니다.</strong> 거부해도 광고는 정상적으로 시청할 수 있고 보상도 받을 수 있으며, 광고 내용이 관심사에 맞춰지지 않을 뿐입니다. 설정 › 개인정보 보호 및 보안 › 추적에서 언제든지 변경할 수 있습니다.</p>
+    <p><strong>Android:</strong> 이 게임에서 따로 묻지 않습니다. 설정 › Google › 모든 서비스 › 광고에서 광고 맞춤 설정을 끄거나 광고 ID를 삭제할 수 있습니다. 꺼도 광고는 정상적으로 시청할 수 있고 보상도 받을 수 있습니다.</p>
+
+    <h2>5. 아동</h2>
+    <p>이 게임은 13세 미만 아동을 대상으로 하지 않으며, 개발자는 아동의 개인정보를 의도적으로 수집하지 않습니다. 보호자로서 자녀가 정보를 제공했다고 생각되시면 연락해 주세요. 즉시 조치하겠습니다.</p>
+
+    <h2>6. 이용자의 권리</h2>
+    <p>개발자는 이용자의 개인정보를 보유하지 않으므로 열람, 정정, 삭제할 데이터가 없습니다. 다음 방법으로 직접 관리하실 수 있습니다:</p>
+    <ul>
+      <li>앱을 삭제하면 기기 안의 데이터가 모두 지워집니다</li>
+      <li>iOS: 설정 › 개인정보 보호 및 보안 › 추적에서 추적 허용을 끄거나 광고 식별자를 재설정</li>
+      <li>Android: 설정 › Google › 모든 서비스 › 광고에서 광고 맞춤 설정을 끄거나 광고 ID를 삭제</li>
+    </ul>
+
+    <h2>7. 방침의 변경</h2>
+    <p>이 방침이 변경되면 이 페이지에 바로 게시하고, 상단의 시행일도 함께 업데이트합니다.</p>
+
+    <h2>8. 문의</h2>
+    <p>이 방침에 관한 문의는
+      <a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a>으로 보내 주세요.</p>
+  </div>
+
   <p class="meta">
-    <a href="index.html">← Support</a>　·　Bounce Duel（鬥球・闘球）
+    <a href="index.html">← Support</a>　·　Bounce Duel（鬥球・闘球・바운스 듀얼）
   </p>
 
 </div>
@@ -255,7 +306,7 @@
       });
     }
     var nav = (navigator.language || "en").toLowerCase();
-    set(nav.indexOf("zh") === 0 ? "zh" : nav.indexOf("ja") === 0 ? "ja" : "en");
+    set(nav.indexOf("zh") === 0 ? "zh" : nav.indexOf("ja") === 0 ? "ja" : nav.indexOf("ko") === 0 ? "ko" : "en");
     btns.forEach(function(b){
       b.addEventListener("click", function(){ set(b.dataset.set); });
     });

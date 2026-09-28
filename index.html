@@ -13,7 +13,7 @@
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{background:var(--bg);color:var(--txt);
-    font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans TC","Hiragino Sans",sans-serif;
+    font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans TC","Hiragino Sans","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
     -webkit-text-size-adjust:100%}
   .wrap{max-width:720px;margin:0 auto;padding:40px 20px 72px}
   header{border-bottom:2px solid var(--txt);padding-bottom:20px;margin-bottom:28px}
@@ -41,7 +41,7 @@
   .langbar button[aria-pressed="true"]{background:var(--txt);color:var(--bg);
     border-color:var(--txt)}
   [data-l]{display:none}
-  body.l-zh [data-l="zh"], body.l-en [data-l="en"], body.l-ja [data-l="ja"]{display:block}
+  body.l-zh [data-l="zh"], body.l-en [data-l="en"], body.l-ja [data-l="ja"], body.l-ko [data-l="ko"]{display:block}
   @media (max-width:520px){
     .wrap{padding:26px 16px 56px}
     .logo span{font-size:22px}
@@ -61,6 +61,7 @@
     <button type="button" data-set="zh" aria-pressed="true">繁體中文</button>
     <button type="button" data-set="en" aria-pressed="false">English</button>
     <button type="button" data-set="ja" aria-pressed="false">日本語</button>
+    <button type="button" data-set="ko" aria-pressed="false">한국어</button>
   </div>
 
   <!-- ================= 繁體中文 ================= -->
@@ -70,7 +71,7 @@
       <p>遇到問題、有建議，或想回報 bug，都歡迎寄信給我：</p>
       <p class="mail"><a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a></p>
       <p style="margin-bottom:0;color:var(--dim);font-size:14px">
-        回報問題時，如果能附上你的裝置型號、iOS 版本，還有問題發生前做了什麼，會幫助很大。</p>
+        回報問題時，如果能附上你的裝置型號、系統版本（iOS／Android），還有問題發生前做了什麼，會幫助很大。</p>
     </div>
 
     <h2>常見問題</h2>
@@ -79,13 +80,13 @@
     <p>全部存在你自己的裝置上，不會上傳到任何地方。這也表示：<strong>沒有雲端同步</strong>，換手機不會把進度帶過去；把 App 刪掉，進度也會一起消失。</p>
 
     <h3>換了手機，之前買的東西怎麼辦？</h3>
-    <p>商店裡有「回復購買」。只要用<strong>同一個 Apple ID</strong>，付費購買的項目都可以免費恢復。用球幣解鎖的東西屬於遊戲進度，不在恢復範圍內。</p>
+    <p>商店裡有「回復購買」。只要用<strong>同一個 Apple ID（Android 為同一個 Google 帳號）</strong>，付費購買的項目都可以免費恢復。用球幣解鎖的東西屬於遊戲進度，不在恢復範圍內。</p>
 
     <h3>廣告看完了，但沒拿到獎勵</h3>
     <p>通常是網路中斷造成的。請確認連線正常後再試一次。如果一直不行，請來信告訴我當時要解鎖的是哪一項。</p>
 
     <h3>完全沒有聲音</h3>
-    <p>請先確認側邊的靜音開關沒有打開、音量不是最小，以及遊戲設定裡的音樂與音效是開著的。如果是從背景切回來之後才沒聲音，把 App 完全關掉再開一次就會恢復。</p>
+    <p>請先確認靜音沒有打開、音量不是最小，以及遊戲設定裡的音樂與音效是開著的。如果是從背景切回來之後才沒聲音，通常幾秒內會自動恢復；沒有的話點一下畫面，再不行就把 App 完全關掉重開。</p>
 
     <h3>遊戲當掉或卡住</h3>
     <p>先把 App 完全關掉重開。如果同一個地方一直發生，請來信描述是哪個模式、哪一關、用哪顆球，我會盡快處理。</p>
@@ -104,7 +105,7 @@
       <p>Questions, suggestions or bug reports are all welcome:</p>
       <p class="mail"><a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a></p>
       <p style="margin-bottom:0;color:var(--dim);font-size:14px">
-        When reporting a problem, your device model, iOS version and what you were doing
+        When reporting a problem, your device model, OS version (iOS / Android) and what you were doing
         just before it happened are a big help.</p>
     </div>
 
@@ -117,7 +118,7 @@
 
     <h3>I got a new phone. What about the things I bought?</h3>
     <p>The shop has a <strong>Restore Purchases</strong> option. Anything you paid for can be
-      restored at no cost as long as you use the <strong>same Apple ID</strong>. Items unlocked
+      restored at no cost as long as you use the <strong>same Apple ID (or the same Google account on Android)</strong>. Items unlocked
       with in-game coins are part of your progress and are not covered.</p>
 
     <h3>I watched an ad but did not get the reward</h3>
@@ -125,9 +126,10 @@
       If it keeps happening, email me and say which item you were trying to unlock.</p>
 
     <h3>There is no sound at all</h3>
-    <p>Check that the silent switch is off, the volume is up, and that music and sound effects
+    <p>Check that the device is not muted, the volume is up, and that music and sound effects
       are enabled in the game's settings. If the sound stopped after returning from the
-      background, fully quit the app and reopen it.</p>
+      background, it usually comes back on its own within a few seconds; if not, tap the screen
+      once, and if that does not help, fully quit the app and reopen it.</p>
 
     <h3>The game froze or crashed</h3>
     <p>Fully quit the app and reopen it. If it happens in the same place every time, email me
@@ -149,7 +151,7 @@
       <p>ご質問・ご要望・不具合のご報告は、こちらまでお願いします：</p>
       <p class="mail"><a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a></p>
       <p style="margin-bottom:0;color:var(--dim);font-size:14px">
-        不具合のご報告では、端末の機種・iOS のバージョン・発生直前の操作を
+        不具合のご報告では、端末の機種・OS のバージョン（iOS／Android）・発生直前の操作を
         添えていただけると助かります。</p>
     </div>
 
@@ -161,7 +163,7 @@
       アプリを削除すると失われます。</p>
 
     <h3>機種変更しました。購入したものはどうなりますか？</h3>
-    <p>ショップの「購入の復元」をご利用ください。<strong>同じ Apple ID</strong> であれば、
+    <p>ショップの「購入の復元」をご利用ください。<strong>同じ Apple ID（Android は同じ Google アカウント）</strong>であれば、
       購入済みの項目は無料で復元できます。コインで解放したものは進行状況の一部のため、
       復元の対象外です。</p>
 
@@ -170,9 +172,9 @@
       改善しない場合は、解放しようとした項目をお知らせください。</p>
 
     <h3>音がまったく出ません</h3>
-    <p>消音スイッチ・音量・ゲーム内設定の音楽と効果音をご確認ください。
-      バックグラウンドから復帰した後に音が出なくなった場合は、
-      アプリを完全に終了してから再度起動してください。</p>
+    <p>消音設定・音量・ゲーム内設定の音楽と効果音をご確認ください。
+      バックグラウンドから復帰した後に音が出なくなった場合は、通常数秒で自動的に戻ります。
+      戻らない場合は画面を一度タップし、それでも出ない場合はアプリを完全に終了してから再度起動してください。</p>
 
     <h3>フリーズ・クラッシュする</h3>
     <p>アプリを完全に終了して再起動してください。同じ場所で繰り返す場合は、
@@ -187,8 +189,53 @@
       <a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
   </div>
 
+  <!-- ================= 한국어 ================= -->
+  <div data-l="ko">
+    <h2>문의하기</h2>
+    <div class="card">
+      <p>질문, 건의 사항, 버그 제보 모두 환영합니다:</p>
+      <p class="mail"><a href="mailto:yenbowie@gmail.com">yenbowie@gmail.com</a></p>
+      <p style="margin-bottom:0;color:var(--dim);font-size:14px">
+        문제를 제보하실 때 기기 모델, OS 버전(iOS／Android), 문제가 생기기 직전에 하던 일을
+        함께 알려 주시면 큰 도움이 됩니다.</p>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <h3>진행 상황은 어디에 저장되나요?</h3>
+    <p>모두 사용하시는 기기 안에만 저장되며 어디에도 전송되지 않습니다. 그래서
+      <strong>클라우드 동기화가 없습니다</strong>. 기기를 바꾸면 진행 상황이 옮겨지지 않고,
+      앱을 삭제하면 함께 사라집니다.</p>
+
+    <h3>기기를 바꿨는데, 구매한 항목은 어떻게 되나요?</h3>
+    <p>상점의 '구매 복원'을 이용해 주세요. <strong>같은 Apple ID(Android는 같은 Google 계정)</strong>라면
+      유료로 구매한 항목은 무료로 복원됩니다. 코인으로 해금한 항목은 진행 상황에 포함되므로
+      복원 대상이 아닙니다.</p>
+
+    <h3>광고를 봤는데 보상을 받지 못했어요</h3>
+    <p>대부분 네트워크 연결이 끊겨서 생기는 문제입니다. 연결 상태를 확인한 뒤 다시 시도해 주세요.
+      계속 같은 문제가 생기면 해금하려던 항목을 메일로 알려 주세요.</p>
+
+    <h3>소리가 전혀 나지 않아요</h3>
+    <p>무음 설정, 볼륨, 그리고 게임 설정의 음악과 효과음이 켜져 있는지 확인해 주세요.
+      백그라운드에서 돌아온 뒤 소리가 나지 않는다면 보통 몇 초 안에 자동으로 돌아옵니다.
+      돌아오지 않으면 화면을 한 번 터치하고, 그래도 안 되면 앱을 완전히 종료한 뒤 다시 실행해 주세요.</p>
+
+    <h3>게임이 멈추거나 튕겨요</h3>
+    <p>앱을 완전히 종료한 뒤 다시 실행해 주세요. 같은 곳에서 계속 발생한다면 모드, 스테이지,
+      사용하던 공을 메일로 알려 주세요. 최대한 빨리 확인하겠습니다.</p>
+
+    <h3>오프라인으로도 플레이할 수 있나요?</h3>
+    <p>네. 게임 전체가 기기에서 실행되며 계정 가입도 필요 없습니다. 인터넷 연결은
+      보상형 광고를 볼 때와 구매할 때만 필요합니다.</p>
+
+    <h2>개인정보</h2>
+    <p>이 게임은 개인정보를 수집하지 않습니다. 자세한 내용은
+      <a href="privacy.html">개인정보 처리방침</a>을 확인해 주세요.</p>
+  </div>
+
   <p class="meta">
-    Bounce Duel（鬥球・闘球）　·　最後更新 / Last updated / 最終更新：2026-09-22
+    Bounce Duel（鬥球・闘球・바운스 듀얼）　·　最後更新 / Last updated / 最終更新 / 최종 업데이트：2026-09-29
   </p>
 
 </div>
@@ -206,7 +253,7 @@
       });
     }
     var nav = (navigator.language || "en").toLowerCase();
-    set(nav.indexOf("zh") === 0 ? "zh" : nav.indexOf("ja") === 0 ? "ja" : "en");
+    set(nav.indexOf("zh") === 0 ? "zh" : nav.indexOf("ja") === 0 ? "ja" : nav.indexOf("ko") === 0 ? "ko" : "en");
     btns.forEach(function(b){
       b.addEventListener("click", function(){ set(b.dataset.set); });
     });
